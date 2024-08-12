@@ -1,1 +1,153 @@
 IP protocol Scanner running...
+Service/port: http/80
+80- http-slowloris-check: 
+  VULNERABLE:
+  Slowloris DOS attack
+    State: LIKELY VULNERABLE
+    IDs:  CVE:CVE-2007-6750
+      Slowloris tries to keep many connections to the target web server open and hold
+      them open as long as possible.  It accomplishes this by opening connections to
+      the target web server and sending a partial request. By doing so, it starves
+      the http server's resources causing Denial Of Service.
+      
+    Disclosure date: 2009-09-17
+    References:
+      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+      http://ha.ckers.org/slowloris/
+
+80- http-enum: 
+  /login.html: Possible admin folder
+
+80- http-jsonp-detection: Couldn't find any JSONP endpoints.
+80- http-litespeed-sourcecode-download: Page: /index.php was not found. Try with an existing file.
+80- http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+Total number of open ports: 1
+Scripts found no vulnerabilities
+No ports open
+Scripts found no vulnerabilities
+No ports open
+Scripts found no vulnerabilities
+No ports open
+Scripts found no vulnerabilities
+No ports open
+Service/port: ssh/22
+Service/port: http/80
+Service/port: X11/6000
+Service/port: X11:1/6001
+80- http-jsonp-detection: Couldn't find any JSONP endpoints.
+80- http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+80- http-majordomo2-dir-traversal: ERROR: Script execution failed (use -d to debug)
+Total number of open ports: 4
+Scripts found no vulnerabilities
+No ports open
+Service/port: iphone-sync/62078
+Scripts found no vulnerabilities
+Total number of open ports: 1
+Scripts found no vulnerabilities
+No ports open
+Service/port: http/80
+Service/port: https/443
+Service/port: sophos/8192
+Service/port: sophos/8193
+Service/port: m2mservices/8383
+Service/port: https-alt/8443
+Service/port: ospf-lite/8899
+80- http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+80- http-vuln-cve2011-3192: 
+  VULNERABLE:
+  Apache byterange filter DoS
+    State: VULNERABLE
+    IDs:  BID:49303  CVE:CVE-2011-3192
+      The Apache web server is vulnerable to a denial of service attack when numerous
+      overlapping byte ranges are requested.
+    Disclosure date: 2011-08-19
+    References:
+      https://www.tenable.com/plugins/nessus/55976
+      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+      https://www.securityfocus.com/bid/49303
+      https://seclists.org/fulldisclosure/2011/Aug/175
+
+80- http-jsonp-detection: Couldn't find any JSONP endpoints.
+443- ssl-dh-params: 
+  VULNERABLE:
+  Diffie-Hellman Key Exchange Insufficient Group Strength
+    State: VULNERABLE
+      Transport Layer Security (TLS) services that use Diffie-Hellman groups
+      of insufficient strength, especially those using one of a few commonly
+      shared groups, may be susceptible to passive eavesdropping attacks.
+    Check results:
+      WEAK DH GROUP 1
+            Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA
+            Modulus Type: Safe prime
+            Modulus Source: nginx/1024-bit MODP group with safe prime modulus
+            Modulus Length: 1024
+            Generator Length: 8
+            Public Key Length: 1024
+    References:
+      https://weakdh.org
+
+443- http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+443- ssl-poodle: 
+  VULNERABLE:
+  SSL POODLE information leak
+    State: LIKELY VULNERABLE
+    IDs:  BID:70574  CVE:CVE-2014-3566
+          The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other
+          products, uses nondeterministic CBC padding, which makes it easier
+          for man-in-the-middle attackers to obtain cleartext data via a
+          padding-oracle attack, aka the "POODLE" issue.
+    Disclosure date: 2014-10-14
+    Check results:
+      TLS_RSA_WITH_AES_128_CBC_SHA
+      TLS_FALLBACK_SCSV properly implemented
+    References:
+      https://www.securityfocus.com/bid/70574
+      https://www.openssl.org/~bodo/ssl-poodle.pdf
+      https://www.imperialviolet.org/2014/10/14/poodle.html
+      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566
+
+443- http-jsonp-detection: Couldn't find any JSONP endpoints.
+443- http-vuln-cve2011-3192: 
+  VULNERABLE:
+  Apache byterange filter DoS
+    State: VULNERABLE
+    IDs:  BID:49303  CVE:CVE-2011-3192
+      The Apache web server is vulnerable to a denial of service attack when numerous
+      overlapping byte ranges are requested.
+    Disclosure date: 2011-08-19
+    References:
+      https://www.tenable.com/plugins/nessus/55976
+      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+      https://www.securityfocus.com/bid/49303
+      https://seclists.org/fulldisclosure/2011/Aug/175
+
+8443- http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+8443- http-jsonp-detection: Couldn't find any JSONP endpoints.
+8443- ssl-dh-params: 
+  VULNERABLE:
+  Diffie-Hellman Key Exchange Insufficient Group Strength
+    State: VULNERABLE
+      Transport Layer Security (TLS) services that use Diffie-Hellman groups
+      of insufficient strength, especially those using one of a few commonly
+      shared groups, may be susceptible to passive eavesdropping attacks.
+    Check results:
+      WEAK DH GROUP 1
+            Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA
+            Modulus Type: Safe prime
+            Modulus Source: nginx/1024-bit MODP group with safe prime modulus
+            Modulus Length: 1024
+            Generator Length: 8
+            Public Key Length: 1024
+    References:
+      https://weakdh.org
+
+Total number of open ports: 7
+
+Service/port: -/49152
+Service/port: iphone-sync/62078
+Scripts found no vulnerabilities
+Total number of open ports: 2
+Scripts found no vulnerabilities
+No ports open
+Scripts found no vulnerabilities
+No ports open
